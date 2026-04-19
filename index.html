@@ -7,129 +7,236 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Font styles -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Grenze+Gotisch:wght@100..900&family=Questrial&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Grenze+Gotisch:wght@100..900&family=Questrial&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/fonts/boska.css">
+    <script src="https://kit.fontawesome.com/7351c08aed.js" crossorigin="anonymous"></script>
 
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" href="css/styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/header-and-nav-styles.css">
+    <link rel="stylesheet" href="css/main-styles.css">
+    <link rel="stylesheet" href="css/footer-styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="js/stagger.js" defer></script>
+    <script src="js/observer.js" defer></script>
     <title>portfolio</title>
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-inner">
-            <svg class="logo" viewBox="0 0 800 220" role="img" aria-label="animated logo">
-                <text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle">
-                    PORTFOLIO
-                </text>
-            </svg>
-    
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
+    <section class="loader">
+        <div class="block1">
+            <section>Welcome to</section>
         </div>
-    </header>
+        <video src="https://cdn.cosmos.so/9fb5fe2f-c4b7-4366-812f-ea2f2ffbc761.mp4" autoplay loop playsinline muted></video>
+        <p>OA</p>
+    </section>
+    
+    <header>        
+        <section class="site-header">
+            <a href="index.html"><h2>OA</h2></a>
+            <nav>
+                <a href="#intro" class="nav-links">Intro<span class="nav-dot"></span></a>
+                <a href="#about" class="nav-links">About Me<span class="nav-dot"></span></a>
+                <a href="projects.html" class="nav-links">Projects<span class="nav-dot"></span></a>
+                <a href="#contact" class="nav-links">Contact<span class="nav-dot"></span></a>
+            </nav>
+        </section>
 
-    <main>
+        <a href="#home" class="back-to-top">back to top</a>
+        
         <!-- HERO SECTION -->
-        <section id="home" class="hero">
-            <div class="hero-inner">
-                <div class="hero-text">
-                    <h1>Oluwaperosayemi <br> <span>Adetunji</span></h1>
-                    <p>Creative UX Designer crafting compelling visual stories through
-                        innovative design solutions</p>
-        
-                    <div class="hero-button">
-                        <a class="btn" href="#contact">Get in Touch</a>
-                        <div class="glow">
-                            <a class="btn" href="#projects">View my Projects</a>
-                        </div>
-                    </div>
+        <section id="hero" class="hero">
+            <section class="hero-text">
+                <div>
+                    <p class="job-title">Oluwaperosayemi Adetunji</p>
                 </div>
+                
+                <div class="hero-main">
+                    <h1 class="h1-letters">
+                        Portfolio
+                    </h1>      
+                    <!-- <video autoplay loop playsinline muted src="https://cdn.cosmos.so/aec49030-66f7-425e-84ec-ba3ea7396998.mp4"></video> -->
+                    <!-- <video src="https://cdn.cosmos.so/3e1251f1-a65e-4757-b1f6-60465bd9843e.mp4" autoplay loop playsinline muted></video> -->
+                    <!-- <video src="https://cdn.cosmos.so/d4d363b3-b2d6-4b8e-82f1-b81166bf46de.mp4" autoplay loop playsinline muted></video> -->
+                    <video src="https://cdn.cosmos.so/f86deb23-b816-45ea-88c3-9964fb7a07cb.mp4" autoplay loop playsinline muted></video>
+                    <!-- <video src="https://cdn.cosmos.so/9fb5fe2f-c4b7-4366-812f-ea2f2ffbc761.mp4" autoplay loop playsinline muted></video> -->
+                    <!-- <img src="https://cdn.cosmos.so/bcc35477-932a-47eb-a1e1-fae731c303d9?format=jpeg" alt=""> -->
+                    <!-- <img src="https://cdn.cosmos.so/8a5465a8-43fc-4732-8aab-26664f3375b4?format=jpeg" alt=""> -->
+                    <!-- <img src="https://cdn.cosmos.so/2d3f5268-da08-4e48-abd9-6b003e419d2b.?format=jpeg" alt=""> -->
+                    <!-- <img src="https://cdn.cosmos.so/c65d162b-83a3-4ed1-b0bb-bb76e6dc6244?format=jpeg" alt=""> -->
+                    <!-- <img src="https://cdn.cosmos.so/fac71a75-5015-4ca5-9274-6e5dbd234038?format=jpeg" alt=""> -->
+                    <!-- <img src="https://cdn.cosmos.so/bc695ff3-d8cb-40bb-8825-d2d9fcf7196b?format=jpeg" alt=""> -->
+                    <!-- <img src="https://cdn.cosmos.so/ea7c41b8-a0e1-4447-b552-afdf179c72e1?format=jpeg" alt=""> -->
 
-                <div class="hero-cards" aria-hidden="true">
-                    <div class="c1 card"></div>
-                    <div class="c2 card"></div>
-                    <div class="c3 card"></div>
+                    <!-- <script>
+                        const video = document.querySelector('.hero-main video');
+                        video.playbackRate = 1;
+                    </script> -->
                 </div>
-
-            </div>
-
-            <div class="wave-container">
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
-            </div>
-        </section>
-        
-        <!-- PROJECTS SECTION -->
-        <section id="projects" class="projects">
-            <div class="project-header">
-                <h2>My Projects</h2>
-                <p>Here's a collection of UX projects where I explored real user problems,<br>
-                    designed solutions, and iterated through research and testing.</p>
-            </div>
-            <div class="grid">
-                <a class="thumb" href="https://www.figma.com/proto/upZONm8TTrFC6A4BCdNnvt/UX-project--The-wok?node-id=6-2089&t=T0LzvrYqZLQLjyKu-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"><img src="img/wok logo.jpg" alt=""><span class="cap">Project 1: The Wok</span></a>
-                <a class="thumb" href="#"><img src="img/Quantum financial logo.jpg" alt=""><span class="cap">Project 2: Quantum Financial</span></a>
-                <a class="thumb" href="https://www.figma.com/proto/CkSsN4TEoj6UpnmpJCAGeZ/Coustic-Website?node-id=161-345&t=x2p9fCeVA3XzPCyl-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=161%3A345"><img src="img/coustic.jpg" alt=""><span class="cap">Project 3: Coustic</span></a>
-                <a class="thumb" href="https://www.figma.com/proto/AOLL5A1QCXbOpHKQdX29X5/Untitled?node-id=1-2&t=T0LzvrYqZLQLjyKu-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"><img src="img/mtwl.jpg" alt=""><span class="cap">Project 4: My Travel Wishlist</span></a>
-                <a class="thumb" href="#"><img src="img/sports hub.jpg" alt=""><span class="cap">Project 5: Sports hub</span></a>
-            </div>
-        </section>
+                
+                
+                <div class="job-handlings">
+                    <p>UX Designer & Front-end Web Developer</p>
+                    <!-- <p>Interface design</p>
+                    <p>Web Developer</p>
+                    <p>Interactive animation</p> -->
+                </div>
+            </section>
             
+            <!-- <section class="hero-extra">
+                <div><svg class="atom" width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"> <path d="M12 3C12 3 13.3815 6.74997 15.3158 8.68421C17.25 10.6185 21 12 21 12C21 12 17.25 13.3816 15.3158 15.3158C13.3816 17.25 12 21 12 21C12 21 10.6185 17.25 8.68421 15.3158C6.74997 13.3815 3 12 3 12C3 12 6.74997 10.6185 8.68421 8.68421C10.6185 6.74997 12 3 12 3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg></div>
+                <div class="line"></div>
+                <div><p>My collection of projects where I explored real user problems, designed solutions, and iterated through research and testing.</p></div>
+                <div class="line"></div>
+                <div><svg class="atom" width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"> <path d="M12 3C12 3 13.3815 6.74997 15.3158 8.68421C17.25 10.6185 21 12 21 12C21 12 17.25 13.3816 15.3158 15.3158C13.3816 17.25 12 21 12 21C12 21 10.6185 17.25 8.68421 15.3158C6.74997 13.3815 3 12 3 12C3 12 6.74997 10.6185 8.68421 8.68421C10.6185 6.74997 12 3 12 3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg></div>
+            </section> -->
+        </section>
+    </header>
+    
+    <main>
+        <!-- INTRO SECTION -->
+        <section class="intro" id="intro">
+            <div class="intro-image">
+                <video src="https://cdn.cosmos.so/e819cf1b-2656-4889-86de-3df1bd22f1be.mp4" autoplay loop playsinline muted></video>
+            </div>
+
+            <div class="intro-content">
+                <h2>Hey there</h2>
+                <p>
+                My name is Oluwaperosayemi Adetunji. I am a Frontend Developer
+                and UX Designer with the aim of building digital experiences that feel intuitive, thoughtful,
+                and user-centered. My background in UX design and front-end development
+                allows me to bridge the gap between how things look and how they work.
+                Scroll down to learn more about my approach, skills, and the work I've done.
+            </p>
+            <!-- <p>Just incase you were wondering. Yes, I built the wepage myself. (it's Technically my biggest project)</p> -->
+            </div>
+        </section>
+
         <!-- ABOUT SECTION -->
         <section id="about" class="about">
-            <h2>About</h2>
-                
-            <div class="about-content">
-                <section class="about-main">
+            <div class="about-main">
+                <section class="about-main-content">
+                    <h2>About me</h2>
                     <p class="about-text">
-                        I'm a UX designer and front-end developer with a strong interest in creating experiences that are intuitive,
-                        accessible, and visually engaging. I approach design with a user-first mindset, focusing on how people think,
-                        behave, and interact with digital products.
-                        <br><br>
                         My work spans user research, wireframing, prototyping, and interface design, with hands-on experience turning
                         concepts into functional layouts using HTML, CSS, and JavaScript. I enjoy solving problems through iteration,
                         testing ideas, and refining details until the experience feels natural and effective.
-                        <br><br>
+                        <br>
                         Whether I'm working independently or collaborating with others, my goal is always to design products that are
                         purposeful, usable, and impactful.
                     </p>
-                    <div class="about-img"></div>
                 </section>
 
-                <section class="about-extra">
-                    <div class="extra">
-                        <input type="checkbox" name="accordian" id="exH1" class="extra-toggle"><label class="extra-header" for="exH1">My Design Approach<div>&#10005;</div></label>
-                        <section class="extra-text">
-                            <p>I prioritize clarity and usability in every project. My process involves understanding user needs,
+                <section class="cards-container">
+                    <div class="card card1">
+                        <section class="education">
+                            <h3>Education</h3>
+
+                            <div>
+                                <section class="ksu">
+                                    <p>Bachelor of Science</p>
+                                    <h4>Software Engineering</h4>
+                                    <div>
+                                        <span>Kennesaw State University</span><span>2026 - date</span>
+                                    </div>
+                                </section>
+
+                                <section class="ctc">
+                                    <p>Associate of Applied Science</p>
+                                    <h4>UX Design/Development</h4>
+                                    <div>
+                                        <span>Chatthoochee Technical College</span><span>2023 - 2025</span>
+                                    </div>
+                                </section>
+                            </div>
+                        </section>    
+
+                        <section class="line"></section>
+
+                        <section>
+                            <h3>Language</h3>
+
+                            <p>English</p>
+                        </section>
+                    
+                    </div>
+
+                    <!-- <div class="card card2">
+                    </div> -->
+                    
+                    <!-- <div class="card card3">
+                        <section class="software">
+                            <h3>Software</h3>
+                            
+                            <div>
+                                <img src="img/logo imgs/fa6-brands_figma.svg" alt="Figma" class="figma">
+                                <img src="img/logo imgs/hugeicons_chat-gpt.svg" alt="ChatGPT" class="chatGPT">
+                                <img src="img/logo imgs/codicon_vscode.svg" alt="VS Code" class="vscode">
+                            </div>
+                        </section>
+                        
+                        <section class="line"></section>
+                        
+                        <section>
+                            <h3>Contact</h3>
+                            <p>Email: perokoyejo@gmail.com</p>
+                            <p>linkedin:</p>
+                            <p>github:</p>
+                        </section>
+                    </div> -->
+                </section>
+            </div>
+
+            <div class="about-extra">
+                <section class="extra">
+                    <h3 class="extra-header">My Design Approach</h3>
+                    <div class="extra-text">
+                        <p>I prioritize clarity and usability in every project. My process involves understanding user needs,
                             defining problems, exploring multiple solutions, and refining designs through feedback and testing.</p>
-                        </section>
                     </div>
-                    <div class="extra">
-                        <input type="checkbox" name="accordian" id="exH2" class="extra-toggle"><label class="extra-header" for="exH2">Skills & Tools<div>&#10005;</div></label>
-                        <section class="extra-text">
-                            <p>I work with tools such as Figma for prototyping and user flows, and I build responsive interfaces using
-                            HTML, CSS, JavaScript, and JavaFX. I'm continuously expanding my skill set to improve both design and development outcomes.</p>
+                </section>
+                    
+                <section class="extra">
+                    <h3 class="extra-header">Skills & Tools</h3>
+                    <div class="extra-text">
+                        <section>
+                            <h3>Web Development Skills</h3>
+                            <p>HTML & CSS</p>
+                            <p>CSS Animations and Transitions</p>
+                            <p>JavaScript</p>
+                            <p>Responsive Web Design</p>
+                            <p>Interactive UI Design</p>
+                            <p>Wireframing & Prototyping</p>
                         </section>
+                        
+                        <!-- <section class="line"></section> -->
+        
+                        <section>
+                            <h3>Design & Prototyping Skills</h3>
+                            <p>Low Fidelity wireframing (Figma)</p>
+                            <p>High Fidelity Prototyping (Figma)</p>
+                        </section>
+                        <!-- <p>I work with tools such as Figma for prototyping and user flows, and I build responsive interfaces using
+                            HTML, CSS, JavaScript, and JavaFX. I'm continuously expanding my skill set to improve both design and development outcomes.</p> -->
                     </div>
-                    <div class="extra">
-                        <input type="checkbox" name="accordian" id="exH3" class="extra-toggle"><label class="extra-header" for="exH3">UX Focus<div>&#10005;</div></label>
-                        <section class="extra-text">
-                            <p>I'm especially interested in user behavior, accessibility, and interaction design. I enjoy identifying
-                            friction points in interfaces and designing solutions that feel intuitive and inclusive.</p>
-                        </section>
+                </section>
+
+                <section class="extra">
+                    <h3 class="extra-header">UX Focus</h3>
+                    <div class="extra-text">
+                        <p>I'm especially interested in user behavior, accessibility, and interaction design. I enjoy identifying
+                        friction points in interfaces and designing solutions that feel intuitive and inclusive.</p>
                     </div>
-                    <div class="extra">
-                        <input type="checkbox" name="accordian" id="exH4" class="extra-toggle"><label class="extra-header" for="exH4">Looking Ahead<div>&#10005;</div></label>
-                        <section class="extra-text">
-                            <p>I'm seeking opportunities where I can continue learning, contribute meaningfully to design-focused teams,
-                            and work on projects that balance creativity with real-world problem solving.</p>
-                        </section>
+                </section>
+
+                <section class="extra">
+                    <h3 class="extra-header">Looking Ahead</h3>
+                    <div class="extra-text">
+                        <p>I'm seeking opportunities where I can continue learning, contribute meaningfully to design-focused teams,
+                        and work on projects that balance creativity with real-world problem solving.</p>
                     </div>
                 </section>
             </div>
@@ -137,7 +244,7 @@
 
         <!-- CONTACT SECTION -->
         <section id="contact" class="contact">
-            <h2>Contact</h2>
+            <h2>GET IN TOUCH</h2>
                   
                 
             <div class="main-container">
