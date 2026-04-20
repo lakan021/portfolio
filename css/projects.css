@@ -1,0 +1,235 @@
+/* PROJECTS SECTION */
+.projects{
+    /* position: relative; */
+    /* padding: 80px 0; */
+    /* border-radius: 14px; */
+    /* scroll-margin-top: 8rem; */
+
+    background-color: #ce7291;
+    /* background-image: url("https://images.unsplash.com/photo-1761259787769-0693fc5a422c?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 82vh; */
+    z-index: 1;
+}
+
+.projects p{
+    /* padding: 20px 0 30px 0;
+    text-align: center; */
+    line-height: 1.5;
+}
+
+.thumb{
+    scroll-snap-align: start;
+    height: 100vh;
+    background-color: #bbb;
+    /* margin: 30px; */
+
+    /* border: solid #eee 2px; */
+    border-left: none;
+    border-right: none;
+    padding: 60px;
+    /* height: 70vh; */
+    width: 100%;
+    color: #1c1c1c;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* scroll-snap-align: start; */
+    /* gap: 10%; */
+
+    text-decoration: none;
+    overflow: hidden;
+    /* border-radius: 12px; */
+    /* animation: pop .5s ease both; */
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-size .35s ease, background-position .35s ease;
+}
+.thumb:nth-child(1){
+    /* background-color: #a60c0c; */
+    background-image: url(/img/project-imgs/the-wok/Frame\ 3.svg);
+    background-size: 135%;
+    color: #eee;
+    z-index: 5;
+}
+.thumb:nth-child(2){
+    background-image: url(/img/project-imgs/quantum-financial/Quantum\ financial\ logo.jpg);
+    background-size: 100%;
+    /* z-index: 4; */
+}
+.thumb:nth-child(3){
+    background-image: url(/img/project-imgs/coustic/coustic.svg);
+    background-size: 100%;
+    /* z-index: 3; */
+}
+.thumb:nth-child(4){
+    background-image: url(/img/project-imgs/mtwl/mtwl.svg);
+    background-size: 100%;
+    /* z-index: 2; */
+}
+.thumb:nth-child(5){
+    background-image: url(/img/project-imgs/sportshub/sportshub\ logo.svg);
+    background-size: 100%;
+    /* z-index: 1; */
+}
+
+.thumb-left{
+    display: flex;
+    /* position: relative; */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    /* background-color: #729974; */
+}
+.thumb-left span{
+    /* font-family: humane, sans-serif; */
+    /* background-color: #eee; */
+    /* color: #1a1a1a; */
+    font-size: 26px;
+}
+.thumb-left section{
+    position: relative;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+}
+.thumb-left h3{
+    line-height: 0.78;
+    /* background-color: beige; */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    /* right: -40px; */
+
+    /* font-family: futura; */
+    font-weight: bolder;
+    font-size: 60px;
+    /* left: 0; */
+    z-index: 10;
+}
+
+.thumb-left button{
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    /* backdrop-filter: blur(20px); */
+    /* border: 2px solid #1a1a1a; */
+}
+
+.thumb:nth-child(1) .thumb-left button{
+    border: 2px solid #eee;
+}
+.thumb:nth-child(1) .thumb-left button i{
+    font-size: 15px;
+    color: #eee;
+    /* background-color: red; */
+}
+.thumb:nth-child(1) .thumb-left button i:hover{}
+
+.thumb:nth-child(2) .thumb-left button i{}
+.thumb:nth-child(2) .thumb-left button i:hover{}
+
+.thumb:nth-child(3) .thumb-left button i{}
+.thumb:nth-child(3) .thumb-left button i:hover{}
+
+.thumb:nth-child(4) .thumb-left button i{}
+.thumb:nth-child(4) .thumb-left button i:hover{}
+
+.thumb:nth-child(5) .thumb-left button i{}
+.thumb:nth-child(5) .thumb-left button i:hover{}
+
+
+
+.thumb-right{
+  /* width: 50%;
+  height: 100%;
+  background: #eed35e;
+  gap: 10px;
+  display: grid; */
+  /* grid-template-areas: 
+  "sub1 sub1 sub1 sub1 sub1 sub1"
+  "sub2 sub2 sub3 sub3 sub4 sub4"
+  "sub5 sub5 sub5 sub5 sub4 sub4"; */
+  /* border: 2px solid black; */
+}
+
+
+.thumb-right div{
+  /* background-color: green; */
+  /* border-radius: 8px; */
+  /* overflow: hidden; */
+}
+
+/* .thumb-right .sub1{
+  grid-area: sub1;
+}
+.thumb-right .sub2{
+  grid-area: sub2;
+}
+.thumb-right .sub3{
+  grid-area: sub3;
+}
+.thumb-right .sub4{
+  grid-area: sub4;
+}
+.thumb-right .sub5{
+  grid-area: sub5;
+} */
+
+
+.thumb-right div img{
+  /* position: absolute; */
+  /* width: 100%; */
+  /* border-radius: 6px; */
+  /* object-fit: contain; */
+  /* transition: transform .35s ease; */
+}
+
+/* .cap{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  translate: 0 100%;
+  transition: translate .35s ease;
+  padding: 10px 12px;
+  font-weight: 500;
+  background: #b5c6b5;
+  color: #1c3e3c;
+} */
+
+
+/* HOVER REVEALS THE CAPTION */
+/* .thumb:hover img{
+  transform: scale(1.1);
+} */
+
+.thumb:hover .cap{
+  translate: 0 0;
+}
+
+@keyframes pop {
+  from{
+    transform: translateY(14px) scale(1);
+  }
+  to{
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}

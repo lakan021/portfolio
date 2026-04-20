@@ -1,0 +1,84 @@
+/* LOADER */
+@keyframes rotate {
+  from{
+    transform: rotate(360deg);
+  }
+  to{
+    /* transform: rotate(0deg); */
+  }
+}
+
+/* H1 */
+@keyframes stagger {
+  from{
+    filter: blur(9px);
+    transform: skewy(30deg) scalex(.2) translateY(50px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+/* P & H2*/
+.hero-text p{
+  animation: swoopUp 1s ease 1.2s forwards;
+}
+.intro-content h2.animate,
+.intro-content p.animate
+{
+  animation: swoopUp 1s ease-in-out forwards;
+}
+
+@keyframes swoopUp {
+  from{
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to{    
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes swoop {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HERO SECTION BG */
+@keyframes zoom {
+  from{
+    background-size: 100%;
+    background-position-y: 100%;
+  }
+  to{
+    background-position: center;
+    background-size: 110%;
+  }
+}
+
+@keyframes fade {
+  from{
+    /* background: rgb(0, 0, 0); */
+    /* background: rgb(109, 109, 109); */
+    visibility: visible;
+    bottom: 0;
+  }
+  to{
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%); */
+    bottom: 100%;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+  }
+}
