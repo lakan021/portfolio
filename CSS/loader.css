@@ -1,0 +1,32 @@
+.loader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffe6;
+    z-index: 9999;
+}
+
+.loader p{
+    /* background: red; */
+    width: 600px;
+    padding: 20px;
+    font: 300 2rem/1.5 'melodrama';
+    text-align: justify;
+}
+
+.loader button{
+    /* background: green; */
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid var(--link-color);
+    font: 500 .7rem/1 'Lora', serif;;
+    background: #26281e;
+    color: #f0f0f0;
+    cursor: pointer;
+}
