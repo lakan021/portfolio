@@ -6,7 +6,7 @@
     <title>Document</title>
 
     <!-- fonts -->
-     <link href="https://api.fontshare.com/v2/css?f[]=melodrama@300,400,500,600,700,1&f[]=lora@400,401,500,501,600,601,700,701,1,2&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=melodrama@300,400,500,600,700,1&f[]=lora@400,401,500,501,600,601,700,701,1,2&f[]=general-sans@1&display=swap" rel="stylesheet">
 
     <!-- styles -->
     <link rel="stylesheet" href="CSS/styles.css">
@@ -17,32 +17,109 @@
 </head>
 <body>
 
-    <section class="loader"><p>This page is still under construction. Some images and links may not work yet, but feel free to explore the code.</p><button type="button">Explore Code</button></section>
+    <!-- <section class="loader"><p>This page is still under construction. Some images and links may not work yet, but feel free to explore the code.</p><button type="button">Explore Code</button></section> -->
     <nav>
+        <p class="nav-logo">O.ADETUNJI</p>
         <ul>
-            <li class="nav-btn left"><a href="index.html">HOME</a></li>
-            <li class="nav-btn left"><a href="#works">WORKS</a></li>
-            <li><img class="nav-logo" src="imgs/webpage-imgs/portfolio-logo.svg" alt="Portfolio Logo"></li>
-            <li class="nav-btn right"><a href="#about">ABOUT</a></li>
-            <li class="nav-btn right"><a href="#contact">CONTACT</a></li>
+            <li class="nav-btn"><a href="index.html">HOME</a></li>
+            <li class="nav-btn"><a href="#career">CAREER</a></li>
+            <li class="nav-btn"><a href="#projects">PROJECTS</a></li>
+            <li class="nav-btn"><a href="#about">ABOUT</a></li>
+            <li class="nav-btn"><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
 
     <header id="home">
         <section class="heading">
-            <div class="name-title"><p>OLUWAPEROSAYEMI ADETUNJI</p><p>UX Designer | Frontend Developer</p></div>
-            <h1>PORTFOLIO</h1>
+            <div class="name-title">
+                <h1>Oluwaperosayemi<br>Adetunji</h1>
+                <p>UX Designer • Frontend Developer</p>
+            </div>
+    
+            <div class="brief-intro">
+                <p>I create intuitive digital experiences that bridge the gap between user needs and business goals. 
+                    I specialize in crafting seamless interfaces, conducting user research, and implementing responsive 
+                    designs that enhance usability and engagement. My work is driven by a passion for understanding user 
+                    behavior and translating insights into innovative solutions.
+                </p>
+            </div>
+    
+            <div>
+                <button class="header-btn resume-btn" type="button" onclick="window.open('./docs/Resume.pdf')">Resume.pdf</button>
+                <button class="header-btn github-btn" type="button" onclick="window.open('https://github.com/lakan021')">GitHub</button>
+            </div>
+        </section>
+
+        <section class="header-image">
+            <img src="" alt="">
         </section>
     </header>
 
     <main>
-        <!-- Works Section -->
-        <section id="works" class="works">
-            <p class="eyebrow">SELECTED WORKS</p>
+        <!-- Career Section -->
+        <section id="career" class="career">
+            <p class="eyebrow">CAREER</p>
+            <div class="header">
+                <!-- <h2>Career.</h2> -->
+                <p>My career journey and professional experiences.</p>
+            </div>
 
-            <div class="header"><h2>Works.</h2><p>Three projects built at the<br>intersection of design and code.</p></div>
+            <div class="career-timeline">
+                <section class="timeline">
+                    <div class="timeline-years">
+                        <span>2023</span>
+                        <span>2024</span>
+                        <span>2025</span>
+                        <span>2026</span>
+                    </div>
+                    <div class="line"></div>
+                </section>
 
-            <div class="line"></div>
+                <section class="timeline-item">
+                    <h3>Chattahoochee Technical College</h3>
+                    <p>A.A.S. UX Design/Development | 2023 - 2025</p>
+                </section>
+                <section class="timeline-item">
+                    <h3>Chattahoochee Technical College</h3>
+                    <p>A.A.S. UX Design/Development | 2023 - 2025</p>
+                </section>
+                
+                <section class="timeline-item">
+                    <h3>Freelance UX Designer & Frontend Developer</h3>
+                    <p>2024 - Present</p>
+                </section>
+
+                <section class="timeline-item">
+                    <h3>Tutor</h3>
+                    <p>2024 - Present</p>
+                </section>
+
+                <section class="timeline-item">
+                    <h3>Kennesaw State University</h3>
+                    <p>B.S. Software Engineering | 2026 - Present</p>
+                </section>
+            </div>
+
+            <div class="current-stats">
+                <h3>Current Status</h3>
+
+                <section>
+                    <p>Student<br>Software Engineering<br>Kennesaw State University</p>
+                    <p>Freelance<br>UX Designer & Frontend Developer</p>
+                    <p>Tutor<br>UX Design<br>Chattahoochee Technical College</p>
+                </section>
+            </div>
+
+
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <p class="eyebrow">SELECTED PROJECTS</p>
+
+            <!-- <div class="header"><h2>Projects.</h2><p>Three projects built at the<br>intersection of design and code.</p></div> -->
+
+            <!-- <div class="line"></div> -->
             <div class="projects">
                 <section class="work-item the-wok">
                     <h3>
@@ -98,13 +175,6 @@
 
                 <!-- right -->
                 <section class="right">
-                    <div class="statement content">
-                        <p>I'm a Frontend Developer and UX Designer based in Marietta, Georgia, currently studying Software Engineering at Kennesaw State University. Before that, I earned an A.A.S. in UX Design & Development from Chattahoochee Technical College.</p><br>
-                        <p>My process starts with understanding people — their needs, frustrations, and goals — then moves through wireframes, prototypes, and working code until the solution is both useful and considered. I care deeply about the gap between how something looks in Figma and how it actually behaves in a browser.</p>
-                    </div>
-                   
-                    <div class="line"></div>
-
                     <div class="skills content">
                         <section>
                             <h4>WEB DEVELOPMENT SKILLS</h4>
