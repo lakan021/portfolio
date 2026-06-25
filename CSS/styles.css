@@ -1,7 +1,7 @@
 :root{
     /* DIMENSIONS */
-    --base-padding: 0 2rem;
-    --works-padding: 6rem;
+    --base-padding: 0 8rem;
+    --projects-padding: 6rem;
     --about-padding: 6rem;
     --footer-padding: 0 6rem;
 
@@ -11,13 +11,13 @@
     --light-grey: #f0f0f0;
     
     /* FONTS */
-    --p-font: 400 .8rem/1 'Lora', serif;
-    --h1-font: 400 20rem/.8 'Melodrama', serif;
-    --h2-font: italic 700 5rem/1 'Lora', serif;
-    --h3-font: 500 1.5rem/1 'Lora', serif;
-    --h4-font: 700 .8rem/1 'Lora', serif;
-    --link-font: 500 .7rem/1 'Lora', serif;
-    --eyebrow-font: 700 .7rem/1 'Lora', serif;
+    --p-font: 400 .9rem/1.5 'General sans', serif;
+    --h1-font: 600 6rem/1 'General sans', serif;
+    --h2-font:  600 4rem/1 'General sans', serif;
+    --h3-font: 500 1.5rem/1 'General sans', serif;
+    --h4-font: 700 .8rem/1 'General sans', serif;
+    --link-font: 500 .7rem/1 'General sans', serif;
+    --eyebrow-font: 700 .7rem/1 'General sans', serif;
     
     /* font colors */
     --p-color: var(--dark-green);
@@ -83,16 +83,17 @@ nav{
     position: fixed;
     top: 0;
 
-    /* background: var(--light-grey); */
+    background: var(--light-grey);
+    height: 6rem;
     width: 100%;
     padding: var(--base-padding);
 
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 .nav-logo{
-    /* background: red; */
-    width: 3.8rem;
+    background: red;
+    /* height: 5rem; */
 }
 nav ul{
     /* background: blue; */
@@ -100,21 +101,19 @@ nav ul{
     width: 100%;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     list-style: none;
+    gap: 1rem;
 }
 
 nav .nav-btn{
     /* background: green; */
-    width: 5rem;
+    text-align: center;
+    /* width: 6rem; */
+    padding: .5rem 1rem;
 }
-nav .left{
-    text-align: left;
-}
-nav .right{
-    text-align: right;
-}
+
 
 nav ul li a{
     text-decoration: none;
@@ -128,64 +127,62 @@ nav ul li a{
  HEADER 
 ========================================*/
 header{
-    background-image: url('../imgs/webpage-imgs/header-img.png');
     /* background-image: url('https://images.unsplash.com/photo-1489537235181-fc05daed5805?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
-    /* background-image: url('https://images.unsplash.com/photo-1520227403038-be195e6e2a91?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
-    /* background-image: url('https://images.unsplash.com/photo-1711107796117-f04e3eb9b4ec?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
-    /* background-image: url('https://images.unsplash.com/photo-1747570352597-81f972943800?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
-    /* background-image: url('https://images.unsplash.com/photo-1678524492964-c0d9fe37a45a?q=80&w=2368&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
-    /* background-image: url('https://images.unsplash.com/photo-1733924302750-4d41eaa7b332?q=80&w=2346&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
-    background-size: 110%;
-    /* background-size: 110%; */
-    background-repeat: no-repeat;
-    background-position: center;
-    /* background-position-x: 60%; */
-    background-position-y: 100%;
-    background-attachment: fixed;
 
     height: 100vh;
     width: 100vw;
     padding: var(--base-padding);
+    margin: 3rem 0 0 0;
+
 
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    /* justify-content: center; */
     align-items: center;
+    gap: 4rem;
 }
 
 
 .heading{
-    /* background: var(--light-grey); */
-    width: 100vw;
-    padding: 2rem;
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 2rem;
+    /* background: purple; */
+    flex: 1
 }
 .name-title{
-    width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-
     font: var(--p-font);
     color: var(--p-color);
 }
 h1{
-    /* background: red; */
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-
+    /* background: blue; */
     font: var(--h1-font);
-    letter-spacing: 1.44rem;
-    text-align: center;
-    text-indent: 1.1rem;
     color: var(--h1-color);
 }
+
+.brief-intro p{
+    font: var(--p-font);
+    color: var(--p-color);
+    text-align: justify;
+}
+
+.header-btn{
+    border: 1px solid var(--dark-green);
+    border-radius: 9px;
+    background: var(--light-grey);
+    padding: 1rem 2rem;
+    font: var(--link-font);
+}
+
+
+.header-image{
+    background: red;
+    width: 80%;
+    height: 50%;
+}
+
+
+
+
 
 
 
@@ -197,19 +194,80 @@ h1{
 main{}
 
 
+/* CAREER SECTION ************************/
+.career{
+    background: rgb(240, 240, 201);
+    width: 100%;
+    padding: var(--projects-padding);
 
-/* WORKS SECTION ************************/
-.works{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.career-timeline{
+    position: relative;
+    background: green;
+    width: 100%;
+    height: 30vh;
+    padding: 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+    /* gap: 4rem; */
+}
+
+.timeline-years{
+    /* background: red; */
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeline-item{
+    position: absolute;
+    background: red;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.current-stats{
+    background: blue;
+    width: 100%;
+    padding: 2rem 0;
+    
+}
+.current-stats section{
+    padding: 2rem 20rem;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 2rem; */
+}
+.current-stats section p{
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+/* PROJECTS SECTION ************************/
+.projects{
     background: rgb(201, 211, 240);
     /* width: 100%; */
-    padding: var(--works-padding);
+    padding: var(--projects-padding);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.works .header{
+.projects .header{
     padding: 1rem 0;
     width: 100%;
     
@@ -217,7 +275,7 @@ main{}
     justify-content: space-between;
     align-items: center;
 }
-.works .header p{
+.projects .header p{
     font-style: italic;
 }
 
