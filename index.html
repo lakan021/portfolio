@@ -4,477 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oluwaperosayemi Adetunji — Portfolio</title>
+
     <link href="https://api.fontshare.com/v2/css?f[]=melodrama@300,400,500,600,700,1&f[]=lora@400,401,500,501,600,601,700,701,1,2&f[]=general-sans@1&display=swap" rel="stylesheet">
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap');
-
-:root{
-    /* single source of truth for horizontal gutter — every top-level
-       section uses this, nothing overrides it locally */
-    --side-padding: clamp(1.5rem, 6vw, 6rem);
-    --section-space: 8rem;
-
-    /* COLORS */
-    --ink: #1c1f16;
-    --ink-soft: #4a4d3f;
-    --paper: #f3f1e6;
-    --paper-dim: #e8e4d3;
-    --guide: #3450e0;
-    --redline: #ff5a34;
-    --sage: #767c5c;
-    --line: rgba(28, 31, 22, 0.16);
-    --line-strong: rgba(28, 31, 22, 0.4);
-
-    /* FONTS */
-    --f-display: 'Melodrama', 'Lora', serif;
-    --f-body: 'General Sans', sans-serif;
-    --f-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-
-    --p-font: 400 1rem/1.6 var(--f-body);
-    --h1-font: 500 5.5rem/0.94 var(--f-display);
-    --h2-font: 500 3.4rem/1.02 var(--f-display);
-    --h3-font: 500 1.4rem/1.15 var(--f-display);
-    --h4-font: 600 .72rem/1 var(--f-mono);
-    --navlink-font: 500 .82rem/1 var(--f-mono);
-    --link-font: 500 .8rem/1 var(--f-mono);
-    --eyebrow-font: 600 .72rem/1 var(--f-mono);
-    --mono-font: 500 .78rem/1 var(--f-mono);
-
-    --p-color: var(--ink);
-    --h1-color: var(--ink);
-    --h2-color: var(--ink);
-    --h3-color: var(--ink);
-    --h4-color: var(--ink-soft);
-    --link-color: var(--ink);
-    --eyebrow-color: var(--ink-soft);
-}
-
-
-/*=======================================
- BASE STYLES
-========================================*/
-*{ margin: 0; padding: 0; box-sizing: border-box; }
-
-html{ scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-
-body{ background: var(--paper); font: var(--p-font); overflow-x: hidden; }
-
-@media (prefers-reduced-motion: reduce){
-    html{ scroll-behavior: auto; }
-    *{ animation: none !important; transition: none !important; }
-}
-
-#home, #experience, #projects, #about{ width: 100%; }
-
-p{ font: var(--p-font); color: var(--p-color); }
-h2{ font: var(--h2-font); color: var(--h2-color); }
-h3{ font: var(--h3-font); color: var(--h3-color); }
-h4{ font: var(--h4-font); color: var(--h4-color); margin-bottom: .6rem; text-transform: uppercase; letter-spacing: .08rem; }
-a{ font: var(--link-font); color: var(--link-color); text-transform: uppercase; }
-
-.eyebrow{
-    font: var(--eyebrow-font);
-    color: var(--eyebrow-color);
-    text-transform: uppercase;
-    width: 100%;
-    margin-bottom: 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: .6rem;
-}
-.eyebrow::before{
-    content: '';
-    width: .4rem;
-    height: .4rem;
-    background: var(--redline);
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-/* shared small mono heading used by Current Status + Education panels */
-.panel-title{
-    font: var(--h4-font);
-    color: var(--ink-soft);
-    text-transform: uppercase;
-    letter-spacing: .08rem;
-    margin-bottom: 1.5rem;
-}
-
-a{ letter-spacing: .06rem; }
-h2, h3{ letter-spacing: -.01rem; }
-
-.line{ width: 100%; height: 1px; background: var(--line); }
-
-::selection{ background: var(--guide); color: var(--paper); }
-:focus-visible{ outline: 2px solid var(--guide); outline-offset: 3px; }
-
-
-/*=======================================
- NAVIGATION
-========================================*/
-nav{
-    position: fixed;
-    top: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(243, 241, 230, 0.75);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--line);
-    border-radius: 100px;
-    padding: .85rem 1.75rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-}
-
-nav ul{ height: fit-content; display: flex; justify-content: right; align-items: center; list-style: none; gap: 1.75rem; }
-nav ul li{ display: flex; align-items: center; }
-nav ul li:not(:last-child)::after{ content: '·'; color: var(--line-strong); margin-left: 1.75rem; }
-
-nav ul li a{
-    text-decoration: none;
-    font: var(--navlink-font);
-    color: var(--link-color);
-    letter-spacing: .04rem;
-    position: relative;
-    padding-bottom: .2rem;
-}
-nav ul li a::after{
-    content: '';
-    position: absolute;
-    left: 0; bottom: 0;
-    width: 0; height: 1px;
-    background: var(--redline);
-    transition: width .25s ease;
-}
-nav ul li a:hover::after{ width: 100%; }
-
-
-/*=======================================
- HEADER — trimmed down to name, role, actions
-========================================*/
-header{
-    height: 100vh;
-    width: 100vw;
-    padding: 0 var(--side-padding);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-}
-
-.heading{ display: flex; flex-direction: column; gap: 2.5rem; flex: 1; max-width: 640px; }
-
-.name-title{ font: var(--p-font); color: var(--p-color); }
-.name-title p{ font: var(--mono-font); text-transform: uppercase; color: var(--sage); margin-top: .9rem; }
-header h1{ font: var(--h1-font); color: var(--h1-color); }
-
-.header-btn-container{ display: flex; gap: .75rem; }
-
-.header-btn{
-    border: 1px solid var(--ink);
-    border-radius: 2px;
-    background: transparent;
-    padding: .9rem 1.75rem;
-    font: var(--link-font);
-    cursor: pointer;
-    transition: background .2s ease, color .2s ease;
-}
-.header-btn:hover{ background: var(--ink); color: var(--paper); }
-.header-btn.resume-btn{ background: var(--ink); color: var(--paper); }
-.header-btn.resume-btn:hover{ background: var(--redline); border-color: var(--redline); color: var(--paper); }
-
-.header-image{
-    position: relative;
-    flex: 1;
-    max-width: 26rem;
-    height: 65vh;
-    background:
-        linear-gradient(rgba(28,31,22,.9), rgba(28,31,22,.9)),
-        repeating-linear-gradient(0deg, transparent, transparent 23px, var(--line) 24px),
-        repeating-linear-gradient(90deg, transparent, transparent 23px, var(--line) 24px);
-    background-blend-mode: normal, screen, screen;
-}
-.header-image::before, .header-image::after{
-    content: '';
-    position: absolute;
-    width: .6rem; height: .6rem;
-    border: 1.5px solid var(--paper);
-    opacity: .6;
-}
-.header-image::before{ top: 1rem; left: 1rem; border-right: none; border-bottom: none; }
-.header-image::after{ bottom: 1rem; right: 1rem; border-left: none; border-top: none; }
-
-
-/*=======================================
- MAIN — every section shares --side-padding and --section-space
-========================================*/
-main{ position: relative; }
-
-.about, .experience, .projects{
-    width: 100%;
-    padding: var(--section-space) var(--side-padding);
-}
-
-
-/* ABOUT SECTION ************************/
-.about-intro{
-    display: flex;
-    justify-content: space-between;
-    gap: 5rem;
-    align-items: flex-start;
-    margin-bottom: 5rem;
-}
-
-.about-intro .left{
-    font: var(--h2-font);
-    flex-shrink: 0;
-}
-
-.statement-panel{
-    position: relative;
-    border: 1px solid var(--line-strong);
-    padding: 2rem;
-    background: rgba(255,255,255,0.25);
-    display: flex;
-    flex-direction: column;
-    gap: 1.1rem;
-    max-width: 34rem;
-}
-.statement-panel::before, .statement-panel::after{
-    content: '';
-    position: absolute;
-    width: .6rem; height: .6rem;
-    border: 1.5px solid var(--redline);
-}
-.statement-panel::before{ top: -1px; left: -1px; border-right: none; border-bottom: none; }
-.statement-panel::after{ bottom: -1px; right: -1px; border-left: none; border-top: none; }
-
-.statement-panel p{ text-align: left; }
-.statement-panel p em{ color: var(--redline); font-style: normal; font-weight: 600; }
-
-.skills-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--line-strong);
-    border: 1px solid var(--line-strong);
-}
-
-.skill-card{
-    background: var(--paper);
-    padding: 2rem;
-}
-
-.skill-card ul{ list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; }
-
-.skill-card ul li p{
-    font: var(--mono-font);
-    color: var(--sage);
-    border: 1px solid var(--line-strong);
-    padding: .35rem .65rem;
-}
-
-
-/* EXPERIENCE SECTION ************************/
-.experience > .header{ margin-bottom: 3.5rem; max-width: 34rem; }
-.experience > .header p{ font: var(--h3-font); }
-
-.experience-timeline{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    row-gap: 1.1rem;
-    padding-bottom: 3.5rem;
-}
-
-.timeline{ grid-column: 1 / -1; }
-.timeline-years{ width: 100%; display: flex; justify-content: space-between; align-items: center; }
-.timeline-years span{ font: var(--mono-font); color: var(--sage); }
-.timeline .line{ margin-top: .9rem; }
-
-.timeline-item{
-    position: relative;
-    background: var(--paper-dim);
-    border-top: 2px solid var(--guide);
-    padding: .9rem 1.1rem;
-    display: flex;
-    flex-direction: column;
-    gap: .15rem;
-}
-.timeline-item h3{ font: 500 1rem/1.2 var(--f-body); }
-.timeline-item p{ font: var(--mono-font); color: var(--sage); }
-
-.ctc{ grid-column: 1 / 3; }
-.freelance{ grid-column: 2 / 7; border-top-color: var(--redline); }
-.tutor{ grid-column: 2 / 7; }
-.ksu{ grid-column: 4 / 7; border-top-color: var(--redline); }
-
-.experience-bottom{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    border-top: 1px solid var(--line);
-    padding-top: 3rem;
-}
-
-.current-stats section{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-}
-.current-stats section p{
-    background: var(--paper);
-    display: flex;
-    align-items: flex-start;
-    padding: 1.25rem;
-    font: 500 .9rem/1.4 var(--f-body);
-}
-
-.education{ display: flex; flex-direction: column; gap: 1.1rem; }
-.education div{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding-left: 1rem;
-    border-left: 2px solid var(--guide);
-}
-.education div span{ color: var(--ink); font-weight: 600; display: block; margin-bottom: .2rem; }
-.education div p{ font-size: .95rem; }
-
-
-/* PROJECTS SECTION ************************/
-.projects .eyebrow{ margin-bottom: 3.5rem; }
-
-.projects-main{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(2, minmax(14rem, auto));
-    gap: 1px;
-    background: var(--line-strong);
-    border: 1px solid var(--line-strong);
-}
-
-.work-item{
-    background: var(--paper);
-    padding: 2.5rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    transition: background .2s ease;
-}
-.work-item:hover{ background: var(--paper-dim); }
-
-.work-item h3{ display: flex; align-items: baseline; gap: .9rem; }
-.work-item h3 span{ font: var(--mono-font); color: var(--redline); display: flex; align-items: center; gap: .6rem; }
-.work-item h3 span .line{ width: 1.6rem; height: 1px; background: var(--line-strong); }
-.work-item p{ max-width: 30rem; color: var(--ink-soft); }
-
-.work-item ul{ list-style: none; display: flex; gap: .5rem; flex-wrap: wrap; }
-.work-item ul li p{ font: var(--mono-font); color: var(--sage); border: 1px solid var(--line-strong); padding: .3rem .6rem; }
-
-.work-item a{
-    margin-top: auto;
-    width: fit-content;
-    text-decoration: none;
-    padding-bottom: .2rem;
-    border-bottom: 1px solid var(--ink);
-}
-
-.the-wok{ grid-column: 1; grid-row: 1; }
-.mtwl{ grid-column: 1; grid-row: 2; }
-.sports-hub{ grid-column: 2; grid-row: 1 / 3; }
-
-.project-summary{
-    width: 100%;
-    padding-top: 1.75rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.project-summary p{ font: var(--mono-font); color: var(--sage); }
-.project-summary a{ text-decoration: none; }
-
-
-/*=======================================
- FOOTER
-========================================*/
-footer{
-    background: var(--ink);
-    width: 100%;
-    padding: var(--section-space) var(--side-padding) 2rem;
-    color: var(--paper);
-}
-footer h2{ color: var(--paper); font: var(--h2-font); }
-footer p, footer a{ color: var(--paper); opacity: .75; }
-
-.contact{
-    width: 100%;
-    padding-top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-.contact p{ font: var(--mono-font); color: var(--paper); opacity: .6; margin-top: 1.5rem; text-transform: uppercase; }
-.contact ul{ text-align: right; list-style: none; display: flex; flex-direction: column; gap: .75rem; }
-.contact ul li a{ text-decoration: none; font: var(--mono-font); letter-spacing: .06rem; transition: opacity .2s ease, color .2s ease; }
-.contact ul li a:hover{ opacity: 1; color: var(--redline); }
-
-footer .line{ margin: 3rem 0 2rem; background-color: var(--paper); opacity: 0.18; }
-
-footer .end{
-    width: 100%;
-    padding-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font: var(--mono-font);
-    color: var(--paper);
-    opacity: .6;
-    text-transform: uppercase;
-}
-
-
-/*=======================================
- RESPONSIVE
-========================================*/
-@media (max-width: 1024px){
-    :root{
-        --h1-font: 500 3.4rem/1 var(--f-display);
-        --h2-font: 500 2.4rem/1.05 var(--f-display);
-        --section-space: 5rem;
-    }
-
-    header{ flex-direction: column; height: auto; padding-top: 9rem; padding-bottom: 4rem; gap: 3rem; }
-    .heading{ max-width: 100%; }
-    .header-image{ width: 100%; max-width: 100%; height: 16rem; }
-
-    .about-intro{ flex-direction: column; gap: 2.5rem; }
-    .statement-panel{ max-width: 100%; }
-    .skills-grid{ grid-template-columns: 1fr; }
-
-    .experience-timeline{ grid-template-columns: 1fr; }
-    .ctc, .freelance, .tutor, .ksu{ grid-column: 1; }
-    .timeline{ display: none; }
-
-    .experience-bottom{ grid-template-columns: 1fr; gap: 3rem; }
-    .current-stats section{ grid-template-columns: 1fr; }
-
-    .projects-main{ grid-template-columns: 1fr; grid-template-rows: auto; }
-    .the-wok, .mtwl, .sports-hub{ grid-column: 1; grid-row: auto; }
-
-    .contact{ flex-direction: column; align-items: flex-start; gap: 2rem; }
-    .contact ul{ text-align: left; }
-}
-
-    </style>
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-
     <nav>
         <ul>
             <li class="nav-btn"><a href="#home">Home</a></li>
@@ -488,7 +22,7 @@ footer .end{
     <header id="home">
         <section class="heading">
             <div class="name-title">
-                <h1>Oluwaperosayemi<br>Adetunji</h1>
+                <h1>Oluwaperosayemi Adetunji</h1>
                 <p>UX Designer · Frontend Developer</p>
             </div>
 
@@ -498,7 +32,7 @@ footer .end{
             </div>
         </section>
 
-        <section class="header-image"></section>
+        <!-- <section class="header-image"></section> -->
     </header>
 
     <main>
@@ -514,41 +48,6 @@ footer .end{
                     <p>I create intuitive digital experiences that bridge the gap between user needs and business goals — specializing in seamless interfaces, user research, and responsive builds that hold up under real use.</p>
                     <p>Outside client work, I tutor design students at Chattahoochee Technical College — it keeps me honest about explaining <em>why</em> a decision works, not just making it work.</p>
                 </div>
-            </div>
-
-            <div class="skills-grid">
-                <section class="skill-card">
-                    <h4>Web Development</h4>
-                    <ul>
-                        <li><p>HTML &amp; CSS</p></li>
-                        <li><p>JavaScript</p></li>
-                        <li><p>API Integration</p></li>
-                        <li><p>Responsive Design</p></li>
-                        <li><p>AI Prompt Engineering</p></li>
-                    </ul>
-                </section>
-
-                <section class="skill-card">
-                    <h4>UX Design</h4>
-                    <ul>
-                        <li><p>User Research</p></li>
-                        <li><p>Usability Testing</p></li>
-                        <li><p>Heuristic Evaluation</p></li>
-                        <li><p>Prototyping</p></li>
-                        <li><p>Wireframing</p></li>
-                    </ul>
-                </section>
-
-                <section class="skill-card">
-                    <h4>Tools &amp; Associations</h4>
-                    <ul>
-                        <li><p>Git &amp; GitHub</p></li>
-                        <li><p>Figma</p></li>
-                        <li><p>VS Code</p></li>
-                        <li><p>Adobe Creative Suite</p></li>
-                        <li><p>Claude / Copilot / ChatGPT</p></li>
-                    </ul>
-                </section>
             </div>
         </section>
 
@@ -595,7 +94,7 @@ footer .end{
 
             <div class="experience-bottom">
                 <div class="current-stats">
-                    <p class="panel-title">Current Status</p>
+                <p class="panel-title">Current Status</p>
                     <section>
                         <p>Student — Software Engineering<br>Kennesaw State University</p>
                         <p>Freelance — UX Designer & Frontend Developer</p>
@@ -603,14 +102,46 @@ footer .end{
                     </section>
                 </div>
 
-                <div class="education">
-                    <p class="panel-title">Education</p>
-                    <div><p><span>A.A.S. UX Design/Development</span>Chattahoochee Technical College · 2023-2025</p></div>
-                    <div><p><span>B.S. Software Engineering</span>Kennesaw State University · 2026-Present</p></div>
+                <div>
+                    <h3 class="panel-title">Skills</h3>
+                    <div class="skills-grid">
+                        <section class="skill-card">
+                            <h4>Web Development</h4>
+                            <ul>
+                                <li><p>HTML &amp; CSS</p></li>
+                                <li><p>JavaScript</p></li>
+                                <li><p>API Integration</p></li>
+                                <li><p>Responsive Design</p></li>
+                                <li><p>AI Prompt Engineering</p></li>
+                            </ul>
+                        </section>
+                        
+                        <section class="skill-card">
+                            <h4>UX Design</h4>
+                            <ul>
+                                <li><p>User Research</p></li>
+                                <li><p>Usability Testing</p></li>
+                                <li><p>Heuristic Evaluation</p></li>
+                                <li><p>Prototyping</p></li>
+                                <li><p>Wireframing</p></li>
+                            </ul>
+                        </section>
+                        
+                        <section class="skill-card">
+                            <h4>Tools &amp; Associations</h4>
+                            <ul>
+                                <li><p>Git &amp; GitHub</p></li>
+                                <li><p>Figma</p></li>
+                                <li><p>VS Code</p></li>
+                                <li><p>Adobe Creative Suite</p></li>
+                                <li><p>Claude / Copilot / ChatGPT</p></li>
+                            </ul>
+                        </section>
+                    </div>
                 </div>
             </div>
         </section>
-
+            
         <!-- Projects Section -->
         <section id="projects" class="projects">
             <p class="eyebrow">Selected Projects</p>
@@ -655,8 +186,8 @@ footer .end{
     <footer>
         <section id="contact" class="contact">
             <div>
-                <h2>Let's<br>work<br>together.</h2>
-                <p>Open to freelance, collaborations,<br>and full-time opportunities.</p>
+                <h2>Let's work together.</h2>
+                <p>Open to freelance, collaborations,and full-time opportunities.</p>
             </div>
 
             <ul>
