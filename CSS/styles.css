@@ -49,7 +49,16 @@
 
 html{ scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 
-body{ background: var(--paper); font: var(--p-font); overflow-x: hidden; }
+body{ 
+    /* background: url(https://images.unsplash.com/photo-1486944859394-ed1c44255713?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+    background: url(https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font: var(--p-font); 
+    overflow-x: hidden;
+}
 
 @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior: auto; }
@@ -147,16 +156,18 @@ nav ul li a:hover::after{ width: 100%; }
  HEADER — trimmed down to name, role, actions
 ========================================*/
 header{
-    height: 100vh;
+    /* background: red; */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    height: 70vh;
     width: 100vw;
-    padding: 0 var(--side-padding);
+    /* padding: 0 var(--side-padding); */
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 4rem;
+    align-items: end;
 }
 
-.heading{ display: flex; flex-direction: column; align-items: center; gap: 2.5rem; flex: 1; }
+.heading{ display: flex; flex-direction: column; align-items: center; gap: 2.5rem; flex: 1; padding-bottom: 2rem; }
 
 .name-title{ font: var(--p-font); color: var(--p-color); }
 .name-title p{ font: var(--mono-font); text-transform: uppercase; color: var(--sage); margin-top: .9rem; text-align: right; }
@@ -168,7 +179,7 @@ header h1{ font: var(--h1-font); color: var(--h1-color); }
     border: 1px solid var(--ink);
     border-radius: 2px;
     background: transparent;
-    padding: .9rem 1.75rem;
+    padding: .9rem 2rem;
     font: var(--link-font);
     cursor: pointer;
     transition: background .2s ease, color .2s ease;
@@ -202,7 +213,7 @@ header h1{ font: var(--h1-font); color: var(--h1-color); }
 /*=======================================
  MAIN — every section shares --side-padding and --section-space
 ========================================*/
-main{ position: relative; }
+main{ position: relative; background: var(--ink); }
 
 .about, .experience, .projects{
     width: 100%;
