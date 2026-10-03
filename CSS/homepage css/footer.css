@@ -1,0 +1,39 @@
+/*=======================================
+ FOOTER
+========================================*/
+footer{
+    background: var(--footer-background);
+    color: var(--footer-color);
+    width: 100%;
+    padding: var(--section-space) var(--side-padding) 2rem;
+}
+footer h2{ color: var(--paper); font: var(--h2-font); }
+footer p, footer a{ color: var(--paper); opacity: .75; }
+
+.contact{
+    width: 100%;
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.contact p{ font: var(--mono-font); color: var(--paper); opacity: .6; margin-top: 1.5rem; text-transform: uppercase; }
+.contact ul{ text-align: right; list-style: none; display: flex; flex-direction: column; gap: .75rem; }
+.contact ul li a{ text-decoration: none; font: var(--mono-font); letter-spacing: .06rem; transition: opacity .2s ease, color .2s ease; }
+.contact ul li a:hover{ opacity: 1; color: var(--redline); }
+
+footer .line{ margin: 3rem 0 2rem; background-color: var(--paper); opacity: 0.18; }
+
+footer .end{
+    width: 100%;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: var(--mono-font);
+    color: var(--paper);
+    opacity: .6;
+    text-transform: uppercase;
+}
+
+
