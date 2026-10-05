@@ -20,11 +20,11 @@
     
     /* BACKGROUNDS */
     --body-background: var(--ink);
-    --nav-background: var(--redline);
+    --nav-background: var(--paper-dim);
     --header-background: var(--green);
-        --header-btn-background: var(--redline);
-        --header-btn-hover: var(--paper);
-        --statement-panel-background: var(--transparent);
+        --header-btn-background: var(--paper-dim);
+        --header-btn-hover: var(--redline);
+        --about-background: var(--redline);
     --main-background: var(--green);
         --experience-background: var(--ink);
         --projects-background: var(--ink);
