@@ -3,52 +3,71 @@
        section uses this, nothing overrides it locally */
     --side-padding: clamp(1.5rem, 6vw, 6rem);
     --section-space: 8rem;
+    --border-radius: .2rem;
 
     /* COLORS */
-    --ink: #141b1c;
-    --ink-soft: #4a4d3f;
+    --transparent: transparent;
+    --ink: #010101;
+    --ink-soft: #1c1c1c;
     --paper: #e6e8f3;
-    --paper-dim: #eaeaea;
+    --paper-dim: #d2d0d0;
     --guide: #3450e0;
     --redline: #ff5a34;
+    --green: #668661;
     --sage: #767c5c;
     --line: rgba(28, 31, 22, 0.16);
     --line-strong: rgba(28, 31, 22, 0.4);
-
-    --nav-background: var(--paper-dim);
-    --main-background: var(--paper);
-        --about-background: var(--ink);
-            --statement-panel-background: var(--paper-dim);
+    
+    /* BACKGROUNDS */
+    --body-background: var(--ink);
+    --nav-background: var(--redline);
+    --header-background: var(--green);
+        --header-btn-background: var(--redline);
+        --header-btn-hover: var(--paper);
+        --statement-panel-background: var(--transparent);
+    --main-background: var(--green);
         --experience-background: var(--ink);
         --projects-background: var(--ink);
+            --work-item-background: var(--paper-dim);
+            --work-item-hover: var(--paper);
     --footer-background: var(--ink);
-    
+        --footer-contact-background: var(--green);
+
     /* FONTS */
+    --f-boska: 'Boska', serif;
+    --f-lora: 'Lora', serif;
     --f-display: 'Melodrama', 'Lora', serif;
     --f-body: 'General Sans', sans-serif;
     --f-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
     
-    --p-font: 400 1rem/1.6 var(--f-body);
-    --h1-font: 500 5.5rem/0.94 var(--f-display);
-    --h2-font: 500 3.4rem/1.02 var(--f-display);
+    --navlink-font: 500 .82rem/1 var(--f-mono);
+    --h1-font: 300 13rem/.8 var(--f-body);
+    --h2-font: 500 2.4rem/1.02 var(--f-display);
     --h3-font: 500 1.4rem/1.15 var(--f-display);
     --h4-font: 600 .72rem/1 var(--f-mono);
-    --navlink-font: 500 .82rem/1 var(--f-mono);
+    --p-font: 400 .9rem/1.6 var(--f-body);
     --link-font: 500 .8rem/1 var(--f-mono);
     --eyebrow-font: 600 .72rem/1 var(--f-mono);
     --mono-font: 500 .78rem/1 var(--f-mono);
     
+    /* TEXT COLORS */
+    --navlink-color: var(--ink);
+    --h1-color: var(--redline);
+    --header-btn-color: var(--ink);
+    --statement-panel-color: var(--paper);
     --p-color: var(--ink);
-    --h1-color: var(--ink);
-    --h2-color: var(--p);
+    --h2-color: var(--paper);
     --h3-color: var(--ink);
     --h4-color: var(--ink-soft);
-    --link-color: var(--ink);
-    --eyebrow-color: var(--ink-soft);
+    --link-color: var(--paper);
+    --work-item-link: var(--ink-soft);
+    --eyebrow-color: var(--paper-dim);
 
     --main-color: var(--ink);
     --about-color: var(--paper);
     --experience-color: var(--ink);
     --projects-color: var(--ink);
     --footer-color: var(--ink);
+
+
 }

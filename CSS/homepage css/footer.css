@@ -11,8 +11,10 @@ footer h2{ color: var(--paper); font: var(--h2-font); }
 footer p, footer a{ color: var(--paper); opacity: .75; }
 
 .contact{
+    background: var(--footer-contact-background);
     width: 100%;
-    padding-top: 0;
+    padding: 2rem 2rem;
+    border-radius: var(--border-radius);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -22,7 +24,7 @@ footer p, footer a{ color: var(--paper); opacity: .75; }
 .contact ul li a{ text-decoration: none; font: var(--mono-font); letter-spacing: .06rem; transition: opacity .2s ease, color .2s ease; }
 .contact ul li a:hover{ opacity: 1; color: var(--redline); }
 
-footer .line{ margin: 3rem 0 2rem; background-color: var(--paper); opacity: 0.18; }
+footer .line{ margin: 2rem 0 1rem; background-color: var(--paper); opacity: 0.18; }
 
 footer .end{
     width: 100%;

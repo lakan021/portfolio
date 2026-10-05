@@ -2,50 +2,10 @@
  MAIN — every section shares --side-padding and --section-space
 ========================================*/
 main{ position: relative; background: var(--main-background); }
-
-.about, .experience, .projects{
+.experience, .projects{
     width: 100%;
     padding: var(--section-space) var(--side-padding);
 }
-
-
-/* ABOUT SECTION ************************/
-.about-intro{
-    display: flex;
-    justify-content: space-between;
-    gap: 5rem;
-    align-items: flex-start;
-    margin-bottom: 5rem;
-}
-
-.about-intro .left{
-    font: var(--h2-font);
-    flex-shrink: 0;
-}
-
-.statement-panel{
-    position: relative;
-    border: 1px solid var(--line-strong);
-    padding: 2rem;
-    background: var(--statement-panel-background);
-    /* background: red; */
-    display: flex;
-    flex-direction: column;
-    gap: 1.1rem;
-    /* max-width: 58rem; */
-}
-.statement-panel::before, .statement-panel::after{
-    content: '';
-    position: absolute;
-    width: .6rem; height: .6rem;
-    border: 1.5px solid var(--redline);
-}
-.statement-panel::before{ top: -1px; left: -1px; border-right: none; border-bottom: none; }
-.statement-panel::after{ bottom: -1px; right: -1px; border-left: none; border-top: none; }
-
-.statement-panel p{ text-align: left; }
-.statement-panel p em{ color: var(--redline); font-style: normal; font-weight: 600; }
-
 
 
 /* EXPERIENCE SECTION ************************/
@@ -72,6 +32,7 @@ main{ position: relative; background: var(--main-background); }
     display: flex;
     flex-direction: column;
     gap: .15rem;
+    border-radius: var(--border-radius);
 }
 .timeline-item h3{ font: 500 1rem/1.2 var(--f-body); }
 .timeline-item p{ font: var(--mono-font); color: var(--sage); }
@@ -94,7 +55,7 @@ main{ position: relative; background: var(--main-background); }
     grid-template-columns: repeat(3, 1fr);
     gap: 1px;
     background: var(--line);
-    border: 1px solid var(--line);
+    /* border: 1px solid var(--line); */
 }
 .current-stats section p{
     background: var(--paper);
@@ -102,6 +63,7 @@ main{ position: relative; background: var(--main-background); }
     align-items: flex-start;
     padding: 1.25rem;
     font: 500 .9rem/1.4 var(--f-body);
+    border-radius: var(--border-radius);
 }
 
 .skills-grid{
@@ -115,6 +77,7 @@ main{ position: relative; background: var(--main-background); }
 .skill-card{
     background: var(--paper);
     padding: 2rem;
+    border-radius: var(--border-radius);
 }
 
 .skill-card ul{ list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; }
@@ -134,23 +97,24 @@ main{ position: relative; background: var(--main-background); }
 .projects-main{
     width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(2, minmax(14rem, auto));
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: repeat(2, minmax(14rem, auto)); */
     gap: 1px;
     background: var(--line-strong);
     border: 1px solid var(--line-strong);
 }
 
 .work-item{
-    background: var(--paper);
-    padding: 2.5rem;
+    background: var(--work-item-background);
+    padding: 4rem 2.5rem;
+    border-radius: var(--border-radius);
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     transition: background .2s ease;
 }
-.work-item:hover{ background: var(--paper-dim); }
+.work-item:hover{ background: var(--work-item-hover); }
 
 .work-item h3{ display: flex; align-items: baseline; gap: .9rem; }
 .work-item h3 span{ font: var(--mono-font); color: var(--redline); display: flex; align-items: center; gap: .6rem; }
@@ -161,6 +125,7 @@ main{ position: relative; background: var(--main-background); }
 .work-item ul li p{ font: var(--mono-font); color: var(--sage); border: 1px solid var(--line-strong); padding: .3rem .6rem; }
 
 .work-item a{
+    color: var(--work-item-link);
     margin-top: auto;
     width: fit-content;
     text-decoration: none;
@@ -168,9 +133,9 @@ main{ position: relative; background: var(--main-background); }
     border-bottom: 1px solid var(--ink);
 }
 
-.the-wok{ grid-column: 1; grid-row: 1; }
-.mtwl{ grid-column: 1; grid-row: 2; }
-.sports-hub{ grid-column: 2; grid-row: 1 / 3; }
+.the-wok{ grid-column: 1; }
+.mtwl{ grid-column: 2; }
+.sports-hub{ grid-column: 3; }
 
 .project-summary{
     width: 100%;
