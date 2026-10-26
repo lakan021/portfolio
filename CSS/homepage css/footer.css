@@ -1,41 +1,48 @@
-/*=======================================
- FOOTER
-========================================*/
+Claude
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Footer · CSS
 footer{
-    background: var(--footer-background);
-    color: var(--footer-color);
     width: 100%;
     padding: var(--section-space) var(--side-padding) 2rem;
+    background: linear-gradient(to bottom, transparent, rgba(8, 9, 12, .6));
+    color: var(--text);
 }
-footer h2{ color: var(--paper); font: var(--h2-font); }
-footer p, footer a{ color: var(--paper); opacity: .75; }
-
+footer > *{ max-width: var(--max-width); margin-left: auto; margin-right: auto; }
+footer h2{ font: var(--h2-font); color: var(--text); }
+footer p, footer a{ color: var(--text-soft); }
+ 
 .contact{
-    background: var(--footer-contact-background);
-    width: 100%;
-    padding: 2rem 2rem;
-    border-radius: var(--border-radius);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    padding: 2.5rem 2rem;
+    border-top: 2px solid var(--redline);
+    display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem;
 }
-.contact p{ font: var(--mono-font); color: var(--paper); opacity: .6; margin-top: 1.5rem; text-transform: uppercase; }
+.contact p{ font: var(--p-font); margin-top: 1rem; }
 .contact ul{ text-align: right; list-style: none; display: flex; flex-direction: column; gap: .75rem; }
-.contact ul li a{ text-decoration: none; font: var(--mono-font); letter-spacing: .06rem; transition: opacity .2s ease, color .2s ease; }
-.contact ul li a:hover{ opacity: 1; color: var(--redline); }
-
-footer .line{ margin: 2rem 0 1rem; background-color: var(--paper); opacity: 0.18; }
-
+.contact ul li a{ text-decoration: none; font: var(--mono-font); letter-spacing: .06rem; text-transform: uppercase; transition: color .2s ease; }
+.contact ul li a:hover{ color: var(--redline); }
+ 
+footer .line{ margin: 2rem auto 1rem; }
 footer .end{
-    width: 100%;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
     padding-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font: var(--mono-font);
-    color: var(--paper);
-    opacity: .6;
     text-transform: uppercase;
 }
-
-
+footer .end p{ font: var(--mono-font); color: var(--text-muted); }

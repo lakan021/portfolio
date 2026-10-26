@@ -1,84 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
-/*=======================================
- BASE STYLES
-========================================*/
 *{ margin: 0; padding: 0; box-sizing: border-box; }
+html{ scroll-behavior: smooth; -webkit-font-smoothing: antialiased; scroll-padding-top: 5rem; }
 
-/* html{ scroll-behavior: smooth; -webkit-font-smoothing: antialiased; } */
-
-body{ 
-    position: relative;
-    background: var(--body-background);
-    /* background: url(https://images.unsplash.com/photo-1486944859394-ed1c44255713?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-    /* background: url(https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-    /* background: url(https://images.unsplash.com/photo-1542491873-564432bfb050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-    /* background: url(https://images.unsplash.com/photo-1555803741-1ac759ac2f53?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-    /* background: url(https://images.unsplash.com/photo-1580595999172-787970a962d8?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-    /* background: url(https://images.unsplash.com/photo-1542407242725-7d7f3d865665?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-    /* background: url(https://images.unsplash.com/photo-1602615644018-d071a559f79a?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-    /* background: url(https://images.unsplash.com/photo-1494154263685-1241ed054a2f?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-    /* background: url(https://images.unsplash.com/photo-1494154263685-1241ed054a2f?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-    background: url(https://images.unsplash.com/photo-1588114410955-e29c67d1f0b9?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font: var(--p-font); 
+body{
+    background: var(--ink);
+    color: var(--text);
+    font: var(--p-font);
     overflow-x: hidden;
 }
 
-nav{ z-index: 99999; }
-header{ z-index: -1; }
-main{ z-index: 999; }
-footer{ z-index: 99999; }
+/* photo lives on a fixed layer (works on iOS, unlike background-attachment) */
+body::before{
+    content: '';
+    position: fixed; inset: 0; z-index: -2;
+    background: url(https://images.unsplash.com/photo-1588114410955-e29c67d1f0b9?q=80&w=2400&auto=format&fit=crop) center / cover no-repeat;
+}
+/* scrim keeps text readable on any part of the photo */
+body::after{
+    content: '';
+    position: fixed; inset: 0; z-index: -1;
+    background: linear-gradient(to bottom, var(--scrim-top), var(--scrim-bottom));
+}
 
+nav{ z-index: 100; }
+main, footer{ position: relative; z-index: 1; }
 
-#home, #experience, #projects{ width: 100%; }
-#home{}
-#experience{ background: var(--experience-background); color: var(--experience-color); }
-#projects{ background: var(--projects-background); color: var(--projects-color); }
-
-p{ font: var(--p-font); color: var(--p-color); }
-h2{ font: var(--h2-font); color: var(--h2-color); }
-h3{ font: var(--h3-font); color: var(--h3-color); }
-h4{ font: var(--h4-font); color: var(--h4-color); margin-bottom: .6rem; text-transform: uppercase; letter-spacing: .08rem; }
-a{ font: var(--link-font); color: var(--link-color); text-transform: uppercase; }
+p{ font: var(--p-font); color: var(--text-soft); }
+h1{ color: var(--text); }
+h2{ font: var(--h2-font); color: var(--text); letter-spacing: -.01rem; }
+h3{ font: var(--h3-font); color: var(--text); letter-spacing: -.01rem; }
+h4{ font: var(--h4-font); color: var(--label); margin-bottom: .6rem; text-transform: uppercase; letter-spacing: .08rem; }
+a{ font: var(--link-font); color: var(--text); text-transform: uppercase; letter-spacing: .06rem; }
 
 .eyebrow{
     font: var(--eyebrow-font);
-    color: var(--eyebrow-color);
+    color: var(--text-muted);
     text-transform: uppercase;
-    width: 100%;
+    display: flex; align-items: center; gap: .6rem;
     margin-bottom: 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: .6rem;
 }
-.eyebrow::before{
-    content: '';
-    width: .4rem;
-    height: .4rem;
-    background: var(--redline);
-    border-radius: 50%;
-    flex-shrink: 0;
-}
+.eyebrow::before{ content: ''; width: .4rem; height: .4rem; background: var(--redline); border-radius: 50%; flex-shrink: 0; }
 
-/* shared small mono heading used by Current Status + Education panels */
 .panel-title{
     font: var(--h4-font);
-    color: var(--ink-soft);
+    color: var(--label);
     text-transform: uppercase;
     letter-spacing: .08rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
-
-a{ letter-spacing: .06rem; }
-h2, h3{ letter-spacing: -.01rem; }
 
 .line{ width: 100%; height: 1px; background: var(--line); }
 
-::selection{ background: var(--guide); color: var(--paper); }
+/* shared glass surface */
+.glass,
+.about, .experience-card, .education-card, .work-item, .contact{
+    background: var(--glass);
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--line);
+    border-radius: var(--border-radius);
+}
+
+::selection{ background: var(--guide); color: var(--ink); }
 :focus-visible{ outline: 2px solid var(--guide); outline-offset: 3px; }
 
-
+@media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation: none !important; transition: none !important; }
+}
