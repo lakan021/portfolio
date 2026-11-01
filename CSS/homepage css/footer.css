@@ -1,48 +1,15 @@
-Claude
+footer{ width: 100%; padding: var(--section-space) var(--side-padding) 2rem; background: var(--paper); border-top: 1px solid var(--ink); }
+footer h2{ font: var(--h2-font); font-size: clamp(2.5rem, 8vw, 7rem); line-height: .9; }
+footer p, footer a{ color: var(--ink); }
 
+.contact{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 5vw, 5rem); align-items: end; }
+.contact p{ margin-top: 1.5rem; max-width: 24rem; }
+.contact ul{ list-style: none; display: flex; flex-direction: column; }
+.contact ul li{ border-top: 1px solid var(--line); }
+.contact ul li:last-child{ border-bottom: 1px solid var(--line); }
+.contact ul li a{ display: block; padding: .9rem 0; text-decoration: none; text-transform: uppercase; letter-spacing: .1em; transition: padding .2s ease; }
+.contact ul li a:hover{ padding-left: .75rem; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Footer · CSS
-footer{
-    width: 100%;
-    padding: var(--section-space) var(--side-padding) 2rem;
-    background: linear-gradient(to bottom, transparent, rgba(8, 9, 12, .6));
-    color: var(--text);
-}
-footer > *{ max-width: var(--max-width); margin-left: auto; margin-right: auto; }
-footer h2{ font: var(--h2-font); color: var(--text); }
-footer p, footer a{ color: var(--text-soft); }
- 
-.contact{
-    padding: 2.5rem 2rem;
-    border-top: 2px solid var(--redline);
-    display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem;
-}
-.contact p{ font: var(--p-font); margin-top: 1rem; }
-.contact ul{ text-align: right; list-style: none; display: flex; flex-direction: column; gap: .75rem; }
-.contact ul li a{ text-decoration: none; font: var(--mono-font); letter-spacing: .06rem; text-transform: uppercase; transition: color .2s ease; }
-.contact ul li a:hover{ color: var(--redline); }
- 
-footer .line{ margin: 2rem auto 1rem; }
-footer .end{
-    display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
-    padding-bottom: 1rem;
-    font: var(--mono-font);
-    text-transform: uppercase;
-}
-footer .end p{ font: var(--mono-font); color: var(--text-muted); }
+footer .line{ margin: 4rem 0 1rem; background: var(--ink); }
+footer .end{ display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+footer .end p{ font: var(--mono-font); color: var(--ink-muted); }

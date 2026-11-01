@@ -3,47 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects — Pero Adetunji</title>
 
-    <!-- fonts -->
     <link href="https://api.fontshare.com/v2/css?f[]=melodrama@300,400,500,600,700,1&f[]=lora@400,401,500,501,600,601,700,701,1,2&f[]=general-sans@1&display=swap" rel="stylesheet">
 
-
-    <link rel="stylesheet" href="CSS/styles.css">
+    <!-- same system as the homepage, so nav + footer match -->
+    <link rel="stylesheet" href="CSS/homepage css/root.css">
+    <link rel="stylesheet" href="CSS/homepage css/base-styles.css">
+    <link rel="stylesheet" href="CSS/homepage css/header.css">
+    <link rel="stylesheet" href="CSS/homepage css/footer.css">
+    <link rel="stylesheet" href="CSS/homepage css/responsive.css">
     <link rel="stylesheet" href="CSS/projects.css">
-    <title>Document</title>
 </head>
 <body>
     <nav>
-        <p class="nav-logo"><a href="index.html">port<br>folio<br>2026</a></p>
         <ul>
-            <li class="nav-btn"><a href="#career">Career</a></li>
-            <li class="nav-btn"><a href="#projects">Projects</a></li>
-            <li class="nav-btn"><a href="#about">About</a></li>
+            <li class="nav-btn"><a href="index.html#home">Home</a></li>
+            <li class="nav-btn"><a href="index.html#experience">Experience</a></li>
+            <li class="nav-btn"><a href="projects.html" aria-current="page">Projects</a></li>
             <li class="nav-btn"><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section class="main-content">
-            <div class="project-card name-title">
-                <h2 class="project-title">Project Title</h2>
-                <p class="project-description">Project description goes here.</p>
-            </div>
-            <div class="project-card name-title">
-                <h2 class="project-title">Project Title</h2>
-                <p class="project-description">Project description goes here.</p>
-            </div>
-            <div class="project-card name-title">
-                <h2 class="project-title">Project Title</h2>
-                <p class="project-description">Project description goes here.</p>
-            </div>
-            <div class="project-card name-title">
-                <h2 class="project-title">Project Title</h2>
-                <p class="project-description">Project description goes here.</p>
+    <main class="projects-page">
+        <section class="projects-hero">
+            <h1 class="project-page-header">All<br>Projects</h1>
+            <div class="projects-hero__meta">
+                <p class="eyebrow">Index</p>
+                <p>Everything I've designed and built, in one place — from client-ready interfaces to personal experiments.</p>
+                <p class="projects-count">03 projects · 2024–2025</p>
             </div>
         </section>
 
-        <h1 class="project-page-header">All Projects</h1>
+        <ol class="project-list">
+            <li class="project-row">
+                <span class="project-num">01</span>
+                <h2 class="project-title">The Wok</h2>
+                <p class="project-description">A food ordering app focused on Asian cuisine — browse by region, technique, or ingredient without getting lost.</p>
+                <ul class="project-tags">
+                    <li>Web App</li>
+                    <li>React</li>
+                    <li>Recipe API</li>
+                </ul>
+                <a class="project-link" href="#"><span>View project &rarr;</span></a>
+            </li>
+
+            <li class="project-row">
+                <span class="project-num">02</span>
+                <h2 class="project-title">My Travel Wishlist</h2>
+                <p class="project-description">Pin destinations, track bucket-list trips, and share itineraries with friends — a personal atlas built for dreamers.</p>
+                <ul class="project-tags">
+                    <li>Full Stack</li>
+                    <li>Maps API</li>
+                </ul>
+                <a class="project-link" href="#"><span>View project &rarr;</span></a>
+            </li>
+
+            <li class="project-row">
+                <span class="project-num">03</span>
+                <h2 class="project-title">Sports Hub</h2>
+                <p class="project-description">Sports gear and equipment for athletes and enthusiasts.</p>
+                <ul class="project-tags">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <a class="project-link" href="projects/sportshub.html"><span>View project &rarr;</span></a>
+            </li>
+
+            <!-- TO ADD A PROJECT: copy a <li class="project-row"> above, bump the number,
+                 and update the count in .projects-count. -->
+        </ol>
     </main>
+
+    <footer>
+        <section id="contact" class="contact">
+            <div>
+                <h2>Let's work together.</h2>
+                <p>Open to freelance, collaborations, and full-time opportunities.</p>
+            </div>
+
+            <ul>
+                <li><a href="mailto:oluwapelumi.adetunji@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/oluwapelumi-adetunji/">LinkedIn</a></li>
+                <li><a href="https://github.com/oluwapelumiadetunji">GitHub</a></li>
+                <li><a href="#">Resume</a></li>
+            </ul>
+        </section>
+
+        <section class="line"></section>
+
+        <section class="end"><p>&copy; 2026 Oluwaperosayemi Adetunji</p><p>Marietta, GA</p></section>
+    </footer>
 </body>
 </html>

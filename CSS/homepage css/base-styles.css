@@ -1,69 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap');
-
 *{ margin: 0; padding: 0; box-sizing: border-box; }
-html{ scroll-behavior: smooth; -webkit-font-smoothing: antialiased; scroll-padding-top: 5rem; }
+html{ scroll-behavior: smooth; -webkit-font-smoothing: antialiased; scroll-padding-top: var(--nav-height); }
 
-body{
-    background: var(--ink);
-    color: var(--text);
-    font: var(--p-font);
-    overflow-x: hidden;
-}
-
-/* photo lives on a fixed layer (works on iOS, unlike background-attachment) */
-body::before{
-    content: '';
-    position: fixed; inset: 0; z-index: -2;
-    background: url(https://images.unsplash.com/photo-1588114410955-e29c67d1f0b9?q=80&w=2400&auto=format&fit=crop) center / cover no-repeat;
-}
-/* scrim keeps text readable on any part of the photo */
-body::after{
-    content: '';
-    position: fixed; inset: 0; z-index: -1;
-    background: linear-gradient(to bottom, var(--scrim-top), var(--scrim-bottom));
-}
+body{ background: var(--paper); color: var(--ink); font: var(--p-font); overflow-x: hidden; }
 
 nav{ z-index: 100; }
 main, footer{ position: relative; z-index: 1; }
 
-p{ font: var(--p-font); color: var(--text-soft); }
-h1{ color: var(--text); }
-h2{ font: var(--h2-font); color: var(--text); letter-spacing: -.01rem; }
-h3{ font: var(--h3-font); color: var(--text); letter-spacing: -.01rem; }
-h4{ font: var(--h4-font); color: var(--label); margin-bottom: .6rem; text-transform: uppercase; letter-spacing: .08rem; }
-a{ font: var(--link-font); color: var(--text); text-transform: uppercase; letter-spacing: .06rem; }
+p{ font: var(--p-font); color: var(--ink); }
+h1, h2, h3{ color: var(--ink); }
+h2{ font: var(--h2-font); letter-spacing: -.01em; }
+h3{ font: var(--h3-font); letter-spacing: -.005em; }
+h4{ font: var(--h4-font); color: var(--ink); margin-bottom: .6rem; text-transform: uppercase; letter-spacing: .12em; }
+a{ font: var(--link-font); color: var(--ink); }
 
+/* small uppercase labels: eyebrow, panel titles, mono-style meta */
+.eyebrow, .panel-title, .title, .experience-card__date, .project-summary p,
+.education-card__heading > div > p, .skills li, .work-item ul li p, footer .end p{
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
 .eyebrow{
-    font: var(--eyebrow-font);
-    color: var(--text-muted);
-    text-transform: uppercase;
+    font: var(--eyebrow-font); color: var(--ink);
     display: flex; align-items: center; gap: .6rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 2rem;
 }
-.eyebrow::before{ content: ''; width: .4rem; height: .4rem; background: var(--redline); border-radius: 50%; flex-shrink: 0; }
-
-.panel-title{
-    font: var(--h4-font);
-    color: var(--label);
-    text-transform: uppercase;
-    letter-spacing: .08rem;
-    margin-bottom: 1.25rem;
-}
+.eyebrow::before{ content: ''; width: .5rem; height: .5rem; background: var(--ink); border-radius: 50%; flex-shrink: 0; }
+.panel-title{ font: var(--h4-font); color: var(--ink); margin-bottom: 1.25rem; }
 
 .line{ width: 100%; height: 1px; background: var(--line); }
 
-/* shared glass surface */
-.glass,
-.about, .experience-card, .education-card, .work-item, .contact{
-    background: var(--glass);
-    -webkit-backdrop-filter: var(--glass-blur);
-    backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--line);
-    border-radius: var(--border-radius);
-}
-
-::selection{ background: var(--guide); color: var(--ink); }
-:focus-visible{ outline: 2px solid var(--guide); outline-offset: 3px; }
+::selection{ background: var(--ink); color: var(--paper); }
+:focus-visible{ outline: 1px solid var(--ink); outline-offset: 4px; }
 
 @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior: auto; }

@@ -1,43 +1,28 @@
 :root{
-    --side-padding: clamp(1.25rem, 6vw, 6rem);
-    --section-space: clamp(5rem, 10vw, 8rem);
-    --border-radius: .35rem;
-    --max-width: 80rem;
+    --side-padding: clamp(1.25rem, 3.5vw, 3.5rem);
+    --section-space: clamp(5rem, 10vw, 9rem);
+    --nav-height: 3.4rem;
+    --border-radius: 0;
 
-    /* PALETTE — built for a photo behind everything */
-    --ink: #0b0c10;
-    --paper: #eef0f7;
-    --text: #eef0f7;
-    --text-soft: rgba(238, 240, 247, .78);
-    --text-muted: rgba(238, 240, 247, .58);
-    --label: #c4cfa3;          /* light sage for mono labels */
-    --redline: #ff5a34;        /* single accent */
-    --guide: #6f86ff;          /* focus / selection */
+    /* PAPER + INK — nothing else */
+    --paper: #f8fafd;
+    --ink: #0a0a0a;
+    --ink-soft: rgba(10, 10, 10, .72);
+    --ink-muted: rgba(10, 10, 10, .55);
+    --line: rgba(10, 10, 10, .2);
+    --line-strong: #0a0a0a;
+    --guide: #0a0a0a;
 
-    /* PHOTO SCRIM — tweak these two to make the image lighter/darker */
-    --scrim-top: rgba(8, 9, 12, .50);
-    --scrim-bottom: rgba(8, 9, 12, .82);
+    --f-display: 'Didot', serif;
+    --f-body: 'Lora', Georgia, serif;
 
-    /* GLASS SURFACES */
-    --glass: rgba(12, 13, 18, .55);
-    --glass-hover: rgba(12, 13, 18, .72);
-    --glass-nav: rgba(12, 13, 18, .6);
-    --glass-blur: blur(14px) saturate(120%);
-    --line: rgba(255, 255, 255, .12);
-    --line-strong: rgba(255, 255, 255, .28);
-
-    /* FONTS */
-    --f-display: 'Melodrama', 'Lora', serif;
-    --f-body: 'General Sans', system-ui, sans-serif;
-    --f-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-
-    --navlink-font: 500 .8rem/1 var(--f-mono);
-    --h1-font: 300 clamp(3.5rem, 9vw, 8rem)/.88 var(--f-body);
-    --h2-font: 500 clamp(1.8rem, 3.5vw, 2.6rem)/1.05 var(--f-body);
-    --h3-font: 500 1.4rem/1.15 var(--f-body);
-    --h4-font: 600 .72rem/1 var(--f-mono);
-    --p-font: 400 .95rem/1.65 var(--f-body);
-    --link-font: 500 .8rem/1 var(--f-mono);
-    --eyebrow-font: 600 .72rem/1 var(--f-mono);
-    --mono-font: 500 .78rem/1.2 var(--f-mono);
+    --navlink-font: 400 .85rem/1 var(--f-body);
+    --h1-font: 500 clamp(1.5rem, 16.5vw, 10rem)/.9 var(--f-display);
+    --h2-font: 500 clamp(2rem, 4.5vw, 3.5rem)/1 var(--f-display);
+    --h3-font: 500 1.5rem/1.1 var(--f-display);
+    --h4-font: 500 .72rem/1 var(--f-body);
+    --p-font: 400 .88rem/1.55 var(--f-body);
+    --link-font: 400 .8rem/1 var(--f-body);
+    --eyebrow-font: 500 .72rem/1 var(--f-body);
+    --mono-font: 400 .75rem/1.3 var(--f-body);
 }
